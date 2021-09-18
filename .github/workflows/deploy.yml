@@ -1,6 +1,7 @@
 name: Build and push to another branch
 
 on: push
+on: workflow_dispatch
 
 jobs:
   build:
