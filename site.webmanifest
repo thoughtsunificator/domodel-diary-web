@@ -1,0 +1,19 @@
+{
+		"name": "domodel-diary",
+		"short_name": "domodel-diary",
+		"icons": [
+				{
+						"src": "/resource/android-chrome-192x192.png",
+						"sizes": "192x192",
+						"type": "image/png"
+				},
+				{
+						"src": "/resource/android-chrome-512x512.png",
+						"sizes": "512x512",
+						"type": "image/png"
+				}
+		],
+		"theme_color": "#201818",
+		"background_color": "#000000",
+		"display": "standalone"
+}
