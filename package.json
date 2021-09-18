@@ -3,7 +3,7 @@
 	"description": "Web context for domodel-diary",
 	"type": "module",
 	"scripts": {
-		"test": "concurrently --success last --raw --kill-others \"http-server -s -p 8080 dist/prod/public\" \"npm run build && nodeunit-esm integration\"",
+		"test": "concurrently --success first --raw \"http-server -s -p 8080 dist/prod/public\" --kill-others \"npm run build && nodeunit-esm integration\"",
 		"start": "rollup --config rollup.config.dev.js --watch",
 		"build": "rollup --config rollup.config.prod.js"
 	},
