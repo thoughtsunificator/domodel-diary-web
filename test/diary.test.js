@@ -30,5 +30,5 @@ it('should return domodel-diary', async function() {
 
 it('should have #auth', async function() {
 	const authNode = await page.evaluate(() => document.querySelector("#auth"))
-	assert.equal(authNode, null)
+	assert.notEqual(authNode, null)
 })
