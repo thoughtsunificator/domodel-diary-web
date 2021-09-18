@@ -33,7 +33,7 @@
 		"@domodel/popup": "^1.0.2",
 		"css-generics": "^1.0.0",
 		"domodel": "^1.0.7",
-		"domodel-diary": "^0.0.4"
+		"domodel-diary": "latest"
 	},
 	"repository": {
 		"type": "git",
