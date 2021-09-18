@@ -31,5 +31,4 @@ export async function diary(test) {
 	const x = await page.evaluate(() => {
 		return document.body.innerHTML
 	});
-	test.done()
 }
