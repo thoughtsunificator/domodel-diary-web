@@ -12,7 +12,7 @@ export async function setUp(done) {
 		})
 		page = await browser.newPage()
 		await page.goto(`http://localhost:8080`)
-		await page.waitForSelector('div');
+		await page.waitForSelector('div')
 		done()
 	} catch(error) {
 		console.error(error)
@@ -30,5 +30,6 @@ export async function diary(test) {
 	test.strictEqual(title, "domodel-diary")
 	const x = await page.evaluate(() => {
 		return document.body.innerHTML
-	});
+	})
+	test.done()
 }

@@ -3,7 +3,7 @@
 	"description": "Web context for domodel-diary",
 	"type": "module",
 	"scripts": {
-		"test": "concurrently --success first --raw \"http-server -s -p 8080 dist/prod/public\" --kill-others \"npm run build && nodeunit-esm integration\"",
+		"test": "concurrently --success first --raw \"http-server -s -p 8080 dist/prod/public\" --kill-others \"wait-on tcp:8080 && npm run build && nodeunit-esm\"",
 		"start": "rollup --config rollup.config.dev.js --watch",
 		"build": "rollup --config rollup.config.prod.js"
 	},
@@ -25,7 +25,8 @@
 		"rollup-plugin-postcss": "^4.0.0",
 		"rollup-plugin-root-import": "^1.0.0",
 		"rollup-plugin-serve": "^1.1.0",
-		"rollup-plugin-terser": "^7.0.2"
+		"rollup-plugin-terser": "^7.0.2",
+		"wait-on": "^6.0.0"
 	},
 	"dependencies": {
 		"@domodel/paginator": "^1.0.1",
