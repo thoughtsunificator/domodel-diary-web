@@ -3,7 +3,7 @@
 	"description": "Web context for domodel-diary",
 	"type": "module",
 	"scripts": {
-		"test": "concurrently --success first --raw \"http-server -s -p 8080 dist/prod/public\" --kill-others \"wait-on tcp:8080 && npm run build && nodeunit-esm\"",
+		"test": "concurrently --success first --raw \"http-server -s -p 8080 dist/prod/public\" --kill-others \"wait-on tcp:8080 && npm run build && mocha\"",
 		"start": "rollup --config rollup.config.dev.js --watch",
 		"build": "rollup --config rollup.config.prod.js"
 	},
@@ -14,7 +14,7 @@
 		"concurrently": "^6.2.1",
 		"eslint": "^7.0.0",
 		"http-server": "^13.0.2",
-		"nodeunit-esm": "^1.0.3",
+		"mocha": "^9.1.1",
 		"postcss": "^8.3.6",
 		"postcss-import": "^14.0.2",
 		"puppeteer": "^10.2.0",
