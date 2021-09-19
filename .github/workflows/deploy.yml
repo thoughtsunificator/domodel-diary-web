@@ -1,6 +1,9 @@
 name: Build and push to another branch
 
-on: [push, repository_dispatch]
+on:
+  push:
+    branches: [master]
+  repository_dispatch:
 
 jobs:
   build:
