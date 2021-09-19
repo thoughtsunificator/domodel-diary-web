@@ -30,7 +30,7 @@
 	},
 	"dependencies": {
 		"@domodel/paginator": "^1.0.1",
-		"@domodel/popup": "^1.0.2",
+		"@domodel/popup": "^1.0.5",
 		"css-generics": "^1.0.0",
 		"domodel": "^1.0.7",
 		"domodel-diary": "latest"

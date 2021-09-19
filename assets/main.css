@@ -206,10 +206,6 @@ button:not(:disabled):hover {
 	grid-template-rows: auto 1fr
 }
 
-.popup.hidden {
-	visibility: hidden
-}
-
 .popup .close {
 	padding: 15px 25px
 }
