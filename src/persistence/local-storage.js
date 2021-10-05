@@ -3,7 +3,7 @@ import CryptoES from "crypto-es";
 const ITEM_NAME = "notes"
 
 function save(diary) {
-	const ciphertext = CryptoES.AES.encrypt(diary.toString(), diary.password).toString()
+	const ciphertext = CryptoES.AES.encrypt(diary.notes.toString(), diary.password).toString()
 	localStorage.setItem(ITEM_NAME, ciphertext)
 }
 
@@ -16,7 +16,7 @@ export default properties => {
 	diary.listen("login", password => {
 		if(localStorage.getItem(ITEM_NAME) === null) {
 			diary.password = password
-			const ciphertext = CryptoES.AES.encrypt(diary.toString(), password).toString()
+			const ciphertext = CryptoES.AES.encrypt(diary.notes.toString(), password).toString()
 			localStorage.setItem(ITEM_NAME, ciphertext)
 			diary.emit("authSuccess")
 		} else {
@@ -24,7 +24,7 @@ export default properties => {
 				const bytes  = CryptoES.AES.decrypt(localStorage.getItem(ITEM_NAME), password);
 				const decryptedData = JSON.parse(bytes.toString(CryptoES.enc.Utf8));
 				diary.password = password
-				decryptedData.forEach(note => diary.addNote(note.content, new Date(note.date)))
+				decryptedData.forEach(note => diary.notes.add(note.content, new Date(note.date)))
 				diary.emit("authSuccess")
 			} catch(ex)  {
 				diary.emit("authFail")
