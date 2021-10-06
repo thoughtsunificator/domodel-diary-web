@@ -7,6 +7,7 @@ import copy from "rollup-plugin-copy-watch"
 import { nodeResolve } from "@rollup/plugin-node-resolve"
 import rootImport from "rollup-plugin-root-import"
 import alias from "@rollup/plugin-alias"
+import globImport from 'rollup-plugin-glob-import'
 
 export default {
 	input: "./src/main.js",
@@ -36,6 +37,7 @@ export default {
 				{ find:/^\.env\.js$/, replacement: "./.env.js" }
 			]
 		}),
+		globImport(),
 		rootImport({
 			root: `${__dirname}/src`,
 			useInput: "prepend",
