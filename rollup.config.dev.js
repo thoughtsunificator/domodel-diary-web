@@ -7,6 +7,7 @@ import alias from "@rollup/plugin-alias"
 import rootImport from "rollup-plugin-root-import"
 import serve from "rollup-plugin-serve"
 import livereload from "rollup-plugin-livereload"
+import globImport from 'rollup-plugin-glob-import'
 
 export default {
 	input: "./src/main.js",
@@ -40,6 +41,7 @@ export default {
 			useInput: "prepend",
 			extensions: ".js",
 		}),
+		globImport(),
 		serve({
 			contentBase: "dist/dev/public",
 			port: 3000
