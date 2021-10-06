@@ -37,11 +37,11 @@ export default {
 				{ find:/^\.env\.js$/, replacement: "./.env.js" }
 			]
 		}),
-		globImport(),
 		rootImport({
 			root: `${__dirname}/src`,
 			useInput: "prepend",
 			extensions: ".js",
-		})
+		}),
+		globImport()
 	]
 }
