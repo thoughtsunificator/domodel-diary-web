@@ -90,6 +90,10 @@ input, select, button, textarea {
 	font-size: 0.8em;
 }
 
+.day.grayed {
+	color: gray;
+}
+
 .editor {
 	position: fixed;
 	display: none;
