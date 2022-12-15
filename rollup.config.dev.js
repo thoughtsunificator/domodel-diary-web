@@ -44,7 +44,7 @@ export default {
 		globImport(),
 		serve({
 			contentBase: "dist/dev/public",
-			port: process.env.PORT
+			port: 3000
 		}),
 		livereload('dist/dev/public')
 	]
