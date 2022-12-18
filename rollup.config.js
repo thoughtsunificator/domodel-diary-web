@@ -15,7 +15,7 @@ export default {
 	output: {
 		file: "./dist/bundle.js",
 		format: "iife",
-		sourcemap: true
+		sourcemap: isDevelopment
 	},
 	plugins: [
 		postcss({
